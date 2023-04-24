@@ -18,14 +18,19 @@ export type Project = {
 	projectId: string;
 };
 
-export type Musings = {
-	id: string;
-	userId: string;
+export type Post = {
+	id?: string;
 	title: string;
 	content: string;
-	published: Boolean;
+	published?: Boolean;
 	categories: string[];
-	createdAt: Date;
-	updatedAt: Date;
-	user: User;
+	creators: string[];
+	createdAt?: Date;
+	updatedAt?: Date;
 };
+
+interface Creator {
+	name: string,
+	email: string,
+	github: string,
+}

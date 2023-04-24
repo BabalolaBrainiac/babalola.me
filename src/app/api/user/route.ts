@@ -9,13 +9,10 @@ const userService = new UserService()
 
 export async function POST(req: Request, res: NextApiResponse) {
 
-	// const {name, email} =req.body
-	// console.log(await req.json())
-
-	if(req.method === "POST") {
 		try {
 
 			const body = await req.json()
+			console.log(body)
 			const validationResponse = UserSchema.safeParse(body)
 
 			if (!validationResponse.success) {
@@ -24,24 +21,31 @@ export async function POST(req: Request, res: NextApiResponse) {
 				throw new createHttpError.BadRequest(`Validation Error ${errors}!`);
 			}
 
-			const {name, email} = validationResponse.data
+			const {name, email, password} = validationResponse.data
 
-			console.log(name, email)
-			const user = await userService.createUser(name, email)
+			console.log(name, email, password)
+			const user = await userService.createUser(name!, email, password)
 
-			// return res.json(user)
+			const userjson = JSON.stringify(user)
+			return new Response(userjson)
 
 		} catch (e) {
 			console.log(e)
 			return e
 		}
-	}
-
-	return new Error("Invalid Request Method Call")
-
 }
+export async function GET(req: NextApiRequest, res: NextApiResponse) {
 
-export async function GET(request: Request, response: Response) {
-	// const user = request.body;
-	return new Response("User is being fetched");
+		try {
+			const [users]: any = await userService.returnAllUsers()
+			console.log(users)
+
+			const usersjson = JSON.stringify(users)
+			return new Response(usersjson)
+
+		} catch (e) {
+			console.log(e)
+			throw e
+		}
+
 }
