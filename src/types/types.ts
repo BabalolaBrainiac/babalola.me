@@ -10,12 +10,12 @@ export type Project = {
 	id: string;
 	title: string;
 	description: string;
-	imageUrl: string;
-	gitRepo: string;
-	url: string;
+	imageUrl?: string;
+	gitRepo?: string;
+	url?: string;
 	published: boolean;
-	creators: User[];
-	projectId: string;
+	creators: string[];
+	projectId?: string;
 };
 
 export type Post = {
