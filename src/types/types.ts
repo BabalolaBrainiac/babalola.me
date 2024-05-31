@@ -2,11 +2,11 @@ export type User = {
 	id: string;
 	name: string;
 	email: string;
-	projects: Project[];
+	projects: ProjectType[];
 	musings: any;
 };
 
-export type Project = {
+export type ProjectType = {
 	id: string;
 	title: string;
 	description: string;

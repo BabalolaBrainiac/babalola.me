@@ -11,7 +11,7 @@ datasource db {
 }
 
 
-model Project {
+ model Project {
   id            String     @id @default(uuid())
   title         String
   description   String

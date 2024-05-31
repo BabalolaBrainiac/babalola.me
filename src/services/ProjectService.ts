@@ -17,7 +17,6 @@ export class ProjectService {
                     creators: project.creators,
                 }
             });
-            console.log(newProject)
             return newProject
         } catch (e) {
             return e;

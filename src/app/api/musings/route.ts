@@ -16,7 +16,6 @@ export async function POST(req: Request, res: NextApiResponse) {
     try {
 
         const body = await req.json()
-        console.log(body)
         const validationResponse = PostSchema.safeParse(body)
 
         if (!validationResponse.success) {
@@ -32,14 +31,12 @@ export async function POST(req: Request, res: NextApiResponse) {
             categories: validationResponse.data.categories,
         }
 
-        console.log(postData)
         const user = await musingService.createPost(postData)
 
         const userjson = JSON.stringify(user)
         return new Response(userjson)
 
     } catch (e) {
-        console.log(e)
         return e
     }
 }
@@ -47,13 +44,11 @@ export async function GET(req: NextApiRequest, res: NextApiResponse) {
 
     try {
         const [posts]: any = await musingService.getAllPosts()
-        console.log(posts)
 
-        const usersjson = JSON.stringify(posts)
-        return new Response(usersjson)
+        const data = JSON.stringify(posts)
+        return new Response(data)
 
     } catch (e) {
-        console.log(e)
         throw e
     }
 

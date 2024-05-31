@@ -48,7 +48,7 @@ export default function NavBar() {
 				</a>
 				<a
 					data-v-54e46119=""
-					href="https://github.com/"
+					href="https://github.com/BabalolaBrainiac"
 					rel="noopener noreferrer"
 					target="_blank"
 					className="pl-7 invisible md:visible">

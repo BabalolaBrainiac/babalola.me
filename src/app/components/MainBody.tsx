@@ -1,8 +1,17 @@
 "use client";
 
+import { useState } from 'react';
+import { ProjectsPage } from './Projects';
+
 export default function MainBody() {
+	const [showProjects, setShowProjects] = useState(false);
+
+	const handleProjectsClick = () => {
+		setShowProjects(true);
+	};
+
 	return (
-		<main className="bg-background ">
+		<main className="bg-background">
 			<section className="text-gray-600 body-font">
 				<div className="max-w-5xl pt-52 mx-auto m-56">
 					<div className="space-x-20 absolute inline-flex items-center -ml-44 space-y-reverse space-y-64 -mt-14">
@@ -25,15 +34,16 @@ export default function MainBody() {
                     hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-300
                     dark:focus:ring-white-800 border-2 border-white 
 						  transform bg-blue-400 transition duration-500 hover:scale-x-95 contrast-200 saturate-200
-                    ">
-							<a
-								className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-black rounded-full group-hover:bg-opacity-0"
-								href="/projects">
+                    "
+							onClick={handleProjectsClick}
+						>
+							<div className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-black rounded-full group-hover:bg-opacity-0">
 								<div className="h-9 w-36 px-6 m-2 flex text-1xl justify-center">
 									<span className="align-middle pt-2">Projects</span>
 								</div>
-							</a>
+							</div>
 						</button>
+
 						<button
 							className="ml-11 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2
                     overflow-hidden text-sm font-medium text-gray-900 rounded-full fill-cyan-300
@@ -69,8 +79,11 @@ export default function MainBody() {
 						</button>
 					</div>
 				</div>
-				{/*Ends Index Page*/}
+				{/* Ends Index Page */}
 			</section>
+			{showProjects && <ProjectsPage />}
 		</main>
 	);
 }
+
+
