@@ -37,7 +37,7 @@ export function ProjectsPage() {
                                     <p className="leading-relaxed mb-3">{project.description}</p>
                                     <div className="flex items-center flex-wrap ">
                                         {project.url && (
-                                            <a href={project.url} className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Link
+                                            <a href={project.url} className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" target="_blank">Link
                                                 <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                                     <path d="M5 12h14M12 5l7 7-7 7"></path>
                                                 </svg>
