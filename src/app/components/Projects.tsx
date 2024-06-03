@@ -17,14 +17,6 @@ export function ProjectsPage() {
             published: true,
             creators: ["Babalola Opeyemi"],
         },
-        {
-            id: "2",
-            title: "Tutorial Hub FrontEnd",
-            description: "Frontend for a project in completion of my Msc Computing",
-            url: "https://tutorial-hub-umber.vercel.app/",
-            published: true,
-            creators: ["Babalola Opeyemi"],
-        },
     ];
 
     return (
