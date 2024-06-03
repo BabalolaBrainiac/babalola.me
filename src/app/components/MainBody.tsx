@@ -54,9 +54,9 @@ export default function MainBody() {
                     ">
 							<a
 								className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-black rounded-full group-hover:bg-opacity-0"
-								href="https://docs.google.com/document/d/16kJ71LQalL32u5rPiYGIZ-5JjmNElKMpVuQA8FpeLdA/edit?usp=sharing" target="_blank">
+								href="https://docs.google.com/document/d/1acZ0q230J-NhPw2Gyw7haBhe3AIgDl9aK9hyOb9ZtTw/edit?usp=sharing" target="_blank">
 								<div className="h-9 w-36 px-6 m-2 flex text-1xl justify-center">
-									<span className="align-middle pt-2">Resume</span>
+									<span className="align-middle pt-2" >Resume</span>
 								</div>
 							</a>
 						</button>
