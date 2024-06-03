@@ -1,26 +1,22 @@
-import { Project } from "@/types/types";
 
 export function ProjectsPage() {
-    const projects: Project[] = [
+    const projects = [
         {
             id: "1",
             title: "Personal Tutor Application",
-            description: "Description of project 1.",
-            imageUrl: "/images/project1.jpg",
-            url: "https://example.com/project1",
+            description: "Backend for a tutoring system for a University. ",
+            url: "https://personal-tutor-app-development.up.railway.app/api/schema/swagger-ui/#/",
             published: true,
-            creators: ["John Doe", "Jane Smith"],
+            creators: ["Babalola Opeyemi"],
         },
         {
             id: "2",
-            title: "Project 2",
-            description: "Description of project 2.",
-            imageUrl: "/images/project2.jpg",
-            url: "https://example.com/project2",
+            title: "Tutorial Hub FrontEnd",
+            description: "Frontend for a project in completion of my Msc Computing",
+            url: "https://tutorial-hub-umber.vercel.app/",
             published: true,
-            creators: ["Alice Johnson", "Bob Brown"],
+            creators: ["Babalola Opeyemi"],
         },
-        // Add more projects as needed
     ];
 
     return (

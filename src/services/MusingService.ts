@@ -36,7 +36,6 @@ export class MusingService {
                 return "No Posts Found"
             }
 
-            console.log(musings)
             return musings
         }).catch((err) => {
             return err

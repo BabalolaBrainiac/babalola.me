@@ -5,6 +5,7 @@ import validator from 'validator';
 import createHttpError from "http-errors";
 import { MusingService } from '@/services/MusingService';
 import { Post } from '@/types/types';
+import { NextRequest, NextResponse } from 'next/server';
 
 const musingService = new MusingService()
 
@@ -39,7 +40,7 @@ export async function POST(req: Request, res: NextApiResponse) {
     }
 }
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export default async function GET(req: NextRequest, res: NextResponse) {
 
     try {
         const [posts]: any = await musingService.getPublished()
