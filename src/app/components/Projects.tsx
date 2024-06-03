@@ -17,6 +17,14 @@ export function ProjectsPage() {
             published: true,
             creators: ["Babalola Opeyemi"],
         },
+        {
+            id: "2",
+            title: "Tutorial Hub FrontEnd",
+            description: "Frontend for a project in completion of my Msc Computing",
+            url: "https://tutorial-hub-umber.vercel.app/",
+            published: true,
+            creators: ["Babalola Opeyemi"],
+        },
     ];
 
     return (
@@ -35,7 +43,7 @@ export function ProjectsPage() {
                                 <div className="p-6">
                                     <h2 className="text-lg font-medium text-gray-900 title-font mb-4">{project.title}</h2>
                                     <p className="leading-relaxed mb-3">{project.description}</p>
-                                    <div className="flex items-center flex-wrap ">
+                                    <div className="flex items-center flex-wrap">
                                         {project.url && (
                                             <a href={project.url} className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0" target="_blank">Link
                                                 <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
