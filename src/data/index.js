@@ -1,4 +1,4 @@
-import { algorithms, devnotes, oscs } from "../assets";
+import { algorithms, devnotes, oscs, nnapt, sgapidc } from "../assets";
 
 export const navLinks = [
   {
@@ -50,20 +50,48 @@ const experiences = [
       "Collaborated with cross-functional teams (backend, blockchain, frontend) at Binance and Bundle Africa to develop internal tools using Node.js, Typescript, Java/Spring Boot, and C#/ASP.Net, <span style='color: white;'>contributing to the overall success</span> of both companies.",
     ],
   },
+  {
+    title: "Backend Software Engineer",
+    company_name: "DevClusters",
+    date: "02/2018 - 12/2021 ",
+    details: [
+      "Developed and managed backend APIs for team networking, <span style='color: white;'>improving user authentication and data security</span>.",
+      "<span style='color: white;'>Integrated various API providers,</span> enhancing functionality and user experience across the application.",
+      "Led major initiatives and projects, <span style='color: white;'>coordinating efforts across teams</span> to deliver impactful technology solutions.",
+    ],
+  },
 ];
 
 const portfolio = [
   {
-    name: "Open Source Computer Science Repo",
+    name: "99apartments",
     description:
-      "A GitHub repo with over 17,000 stars containing a curated list of free online courses from reputable universities that satisfy undergraduate computer science requirements.",
-    image: oscs,
+      "A comprehensive platform featuring extensive apartment listings, detailed property information, advanced search filters, tenant reviews, online booking, and property management tools, aimed at simplifying the rental process for both tenants and property owners.",
+    image: nnapt,
   },
   {
-    name: "Dev Notes",
+    name: "SafeGarageNG",
     description:
-      "A newsletter with over 6,000 readers made for software developers to keep up with this rapidly evolving industry, with a sister platform in progress.",
-    image: devnotes,
+      "API documentation for SafeGarageNG, a robust platform enabling users to seamlessly search for and secure parking spots.",
+    image: sgapidc,
+  },
+  {
+    name: "Visually Understanding Algorithms",
+    description:
+      "A showcase of animated algorithms coded using TypeScript, with the video garnering over 400,000 views.",
+    image: algorithms,
+  },
+  {
+    name: "Visually Understanding Algorithms",
+    description:
+      "A showcase of animated algorithms coded using TypeScript, with the video garnering over 400,000 views.",
+    image: algorithms,
+  },
+  {
+    name: "Visually Understanding Algorithms",
+    description:
+      "A showcase of animated algorithms coded using TypeScript, with the video garnering over 400,000 views.",
+    image: algorithms,
   },
   {
     name: "Visually Understanding Algorithms",
